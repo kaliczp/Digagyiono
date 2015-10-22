@@ -1,0 +1,17 @@
+{
+    "contents" : "beolvas=function(file){\n  teszt=read.table(file, skip=4, sep=\"|\", comment=\"=\")\n  teszt[1,2:16] ## Az első és az utolsó oszlop törlése\n  teszt[1,-c(1,17)] ## Másképpen\n  teszt.jav=teszt[,-c(1,ncol(teszt))] ## Egész fájlra másképpen\n  ## Fejléc\n  teszt.head=read.table(file=\"20130601.tab\", skip=2, sep=\"|\", nrows=1, stringsAs=F, quot=\"\")\n  teszt.head.jav=teszt.head[,-c(1,ncol(teszt.head))]\n  colnames(teszt.jav)=teszt.head.jav\n  teszt.jav\n}\n",
+    "created" : 1444306010546.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "727043891",
+    "id" : "123CFEC3",
+    "lastKnownWriteTime" : 1444308007,
+    "path" : "~/oktatas/doktori/adatgy/2015/Digi/beolvas.R",
+    "project_path" : "beolvas.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
