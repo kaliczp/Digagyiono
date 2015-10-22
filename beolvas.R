@@ -1,4 +1,6 @@
 beolvas=function(file){
+  
+ 
   teszt=read.table(file, skip=4, sep="|", comment="=")
   teszt[1,2:16] ## Az első és az utolsó oszlop törlése
   teszt[1,-c(1,17)] ## Másképpen
@@ -9,3 +11,11 @@ beolvas=function(file){
   colnames(teszt.jav)=teszt.head.jav
   teszt.jav
 }
+
+## mappa összes fájlja: dir()
+## fájl válogatás: pl.: dir(pattern = "*.tab")
+## HELP erre: Reguláris kifejezések(*,. stb) v. R-ben Regular expression
+
+## Ha bizonyos csoportosítás szerinti fájlokkal akarok dolgozni:
+## scan("lista.txt","character", n=2,)
+## a scan fv. gyorsabban olvas be, és ott kiírja a dátumot, amit majd a sorok elejére kell majd
